@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class PRU03E07Test_Ivan_Cabellos {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //Creamos la lista de productos
         ArrayList<PRU03E07_Ivan_Cabellos> products = new ArrayList<>();
 
@@ -43,6 +43,7 @@ public class PRU03E07Test_Ivan_Cabellos {
                     if (exitFromList == 7) continue;
 
                     break;
+
                 case 2:
                     //Instanciamos el producto
                     PRU03E07_Ivan_Cabellos newProduct = new PRU03E07_Ivan_Cabellos();
@@ -74,10 +75,22 @@ public class PRU03E07Test_Ivan_Cabellos {
 
                 case 3:
                     System.out.println("What do you want to delete?");
-                    System.out.print("Enter the product id: ");
-                    int productDrop = sc.nextInt();
+                    System.out.print("Enter the product id or enter 'list' for show the list: ");
+                    String controlStringForDelete = sc.next();
 
-                    products.remove(productDrop - 1); break;
+                    while (controlStringForDelete.equals("list")){
+                        System.out.println("List: ");
+                        System.out.println(products.toString() + "\n");
+
+                        System.out.println("Enter the id or enter another time 'list' for show it again");
+                        controlStringForDelete = sc.next();
+                    }
+                    try{
+                        int productIdDelete = Integer.parseInt(controlStringForDelete);
+                        products.remove(productIdDelete - 1); break;
+                    } catch(Exception e){
+                        throw new Exception("The id doesn't match with any product");
+                    }
 
                 case 4:
                     System.out.println("What do you want to update?");
@@ -119,26 +132,31 @@ public class PRU03E07Test_Ivan_Cabellos {
                 case 5:
                     System.out.print("Which product do you want to modify: ");
                     int productModifyID = sc.nextInt();
+                    int stockActualEntered = products.get(productModifyID - 1).getStock();
                     PRU03E07_Ivan_Cabellos modifyStockEnterProduct = products.get(productModifyID - 1);
 
                     System.out.println("Enter how many products has entered");
-                    int newStock = sc.nextInt(); modifyStockEnterProduct.setStock(newStock);
+                    int newStock = sc.nextInt(); modifyStockEnterProduct.setStock(newStock + stockActualEntered);
                     products.set(productModifyID - 1, modifyStockEnterProduct);
                     break;
 
                 case 6:
                     System.out.print("Which product do you want to modify: ");
                     int productModifyOutID = sc.nextInt();
+                    int stockActualOut = products.get(productModifyOutID - 1).getStock();
                     PRU03E07_Ivan_Cabellos modifyStockOutProduct = products.get(productModifyOutID - 1);
 
-                    System.out.println("Enter how many products has sold");
-                    int newOutStock = sc.nextInt(); modifyStockOutProduct.setStock(newOutStock);
-                    products.set(productModifyOutID - 1, modifyStockOutProduct);
+                    System.out.print("Enter how many products has sold: ");
+                    int newOutStock = sc.nextInt();
+                    try {
+                        modifyStockOutProduct.setStock(stockActualOut - newOutStock);
+                        products.set(productModifyOutID - 1, modifyStockOutProduct);
+                    } catch (Exception e) {
+                        throw new Exception("You don't have sotck enought");
+                    }
                     break;
             }
         }
         /* - MENU - */
     }
-
-
 }
