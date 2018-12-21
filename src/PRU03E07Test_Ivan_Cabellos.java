@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class PRU03E06Test_Ivan_Cabellos {
+public class PRU03E07Test_Ivan_Cabellos {
 
     public static void main(String[] args) {
         //Creamos la lista de productos
@@ -17,7 +17,7 @@ public class PRU03E06Test_Ivan_Cabellos {
         products.add(mouse);
         products.add(gamingDisplay);
 
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in).useDelimiter("\\n");
         int menuControler = 0;
 
         /* MENU */
@@ -37,6 +37,11 @@ public class PRU03E06Test_Ivan_Cabellos {
                     //Imprimimos la lista por consola
                     System.out.println("List: ");
                     System.out.println(products.toString() + "\n");
+
+                    System.out.println("Press 7 to exit to menu");
+                    int exitFromList = sc.nextInt();
+                    if (exitFromList == 7) continue;
+
                     break;
                 case 2:
                     //Instanciamos el producto
@@ -45,7 +50,7 @@ public class PRU03E06Test_Ivan_Cabellos {
 
                     //Añadimos la descripcion
                     System.out.println("What do you want to add? Enter a description");
-                    String description = sc.nextLine();
+                    String description = sc.next();
                     newProduct.setDesc(description);
 
                     //Entramos el precio al por mayor
@@ -66,7 +71,15 @@ public class PRU03E06Test_Ivan_Cabellos {
                     //Añadimos el producto a la lista
                     products.add(newProduct);
                     break;
+
                 case 3:
+                    System.out.println("What do you want to delete?");
+                    System.out.print("Enter the product id: ");
+                    int productDrop = sc.nextInt();
+
+                    products.remove(productDrop - 1); break;
+
+                case 4:
                     System.out.println("What do you want to update?");
                     System.out.print("Enter the product id: ");
                     int productID = sc.nextInt();
@@ -103,7 +116,7 @@ public class PRU03E06Test_Ivan_Cabellos {
                     //Lo asignamos una vez modificado
                     products.set(productID - 1, modifyProduct); break;
 
-                case 4:
+                case 5:
                     System.out.print("Which product do you want to modify: ");
                     int productModifyID = sc.nextInt();
                     PRU03E07_Ivan_Cabellos modifyStockEnterProduct = products.get(productModifyID - 1);
@@ -113,7 +126,7 @@ public class PRU03E06Test_Ivan_Cabellos {
                     products.set(productModifyID - 1, modifyStockEnterProduct);
                     break;
 
-                case 5:
+                case 6:
                     System.out.print("Which product do you want to modify: ");
                     int productModifyOutID = sc.nextInt();
                     PRU03E07_Ivan_Cabellos modifyStockOutProduct = products.get(productModifyOutID - 1);

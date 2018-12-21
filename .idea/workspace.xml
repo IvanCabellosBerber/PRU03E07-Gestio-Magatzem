@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fbcb2f5e-da60-4cc4-9762-155dfc11b7d4" name="Default" comment="" />
+    <list default="true" id="fbcb2f5e-da60-4cc4-9762-155dfc11b7d4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PRU03E06Test_Ivan_Cabellos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PRU03E07Test_Ivan_Cabellos.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PRU03E07_Ivan_Cabellos.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PRU03E07_Ivan_Cabellos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PRU03E07_Ivan_Cabellos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="35" selection-end-line="70" />
+            <state relative-caret-position="1190">
+              <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
               <folding>
                 <element signature="e#450#451#0" expanded="true" />
                 <element signature="e#475#476#0" expanded="true" />
@@ -25,6 +29,7 @@
                 <element signature="e#567#568#0" expanded="true" />
                 <element signature="e#594#595#0" expanded="true" />
                 <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
                 <element signature="e#702#703#0" expanded="true" />
                 <element signature="e#737#738#0" expanded="true" />
                 <element signature="e#790#791#0" expanded="true" />
@@ -42,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PRU03E06Test_Ivan_Cabellos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PRU03E06Test_Ivan_Cabellos.java">
+      <file leaf-file-name="PRU03E07Test_Ivan_Cabellos.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PRU03E07Test_Ivan_Cabellos.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+            <state relative-caret-position="269">
+              <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,11 +68,15 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/PRU03E07_Ivan_Cabellos.java" />
         <option value="$PROJECT_DIR$/src/PRU03E06Test_Ivan_Cabellos.java" />
+        <option value="$PROJECT_DIR$/src/PRU03E07Test_Ivan_Cabellos.java" />
       </list>
     </option>
   </component>
@@ -77,6 +86,7 @@
     <option name="width" value="974" />
     <option name="height" value="1057" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -115,9 +125,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PRU03E06Test_Ivan_Cabellos">
-    <configuration name="PRU03E06Test_Ivan_Cabellos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PRU03E06Test_Ivan_Cabellos" />
+  <component name="RunManager" selected="Application.PRU03E07Test_Ivan_Cabellos">
+    <configuration name="PRU03E07Test_Ivan_Cabellos" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PRU03E07Test_Ivan_Cabellos" />
       <module name="PRU03E07 Gestió magatzem" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -169,11 +179,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.PRU03E07_Ivan_Cabellos" />
-      <item itemvalue="Application.PRU03E06Test_Ivan_Cabellos" />
+      <item itemvalue="Application.PRU03E07Test_Ivan_Cabellos" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PRU03E06Test_Ivan_Cabellos" />
+        <item itemvalue="Application.PRU03E07Test_Ivan_Cabellos" />
         <item itemvalue="Application.PRU03E07_Ivan_Cabellos" />
       </list>
     </recent_temporary>
@@ -203,8 +213,8 @@
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25969827" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41594827" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
@@ -215,7 +225,7 @@
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3114224" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3114224" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -228,14 +238,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/PRU03E06Test_Ivan_Cabellos.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="6" />
     </breakpoint-manager>
   </component>
@@ -247,20 +249,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PRU03E06Test_Ivan_Cabellos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PRU03E07_Ivan_Cabellos.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="35" selection-end-line="70" />
+        <state relative-caret-position="1190">
+          <caret line="70" lean-forward="true" selection-start-line="70" selection-end-line="70" />
           <folding>
             <element signature="e#450#451#0" expanded="true" />
             <element signature="e#475#476#0" expanded="true" />
@@ -269,6 +261,7 @@
             <element signature="e#567#568#0" expanded="true" />
             <element signature="e#594#595#0" expanded="true" />
             <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
             <element signature="e#702#703#0" expanded="true" />
             <element signature="e#737#738#0" expanded="true" />
             <element signature="e#790#791#0" expanded="true" />
@@ -281,6 +274,16 @@
             <element signature="e#1049#1050#0" expanded="true" />
             <element signature="e#1088#1089#0" expanded="true" />
             <element signature="e#1122#1123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PRU03E07Test_Ivan_Cabellos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="79" column="20" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
