@@ -1,64 +1,64 @@
 
 public class PRU03E07_Ivan_Cabellos {
 
-    private int id;
-    private String desc;
-    private double articlePrice;
-    private double salePrice;
+    private String codi = "LLIURE";
+    private String descripcio;
+    private double preuDeCompra;
+    private double preuDeVenta;
     private int stock;
 
     public PRU03E07_Ivan_Cabellos(){
         //VOID CONSTRUCTOR
     }
 
-    public PRU03E07_Ivan_Cabellos(int id, String desc, double articlePrice, double salePrice, int stock) throws Exception {
+    public PRU03E07_Ivan_Cabellos(String codi, String desc, double preuDeCompra, double preuDeVenta, int stock) throws Exception {
         try{
-            setId(id);
-            setDesc(desc);
-            setArticlePrice(articlePrice);
-            setSalePrice(salePrice);
+            setCodi(codi);
+            setDescripcio(desc);
+            setPreuDeCompra(preuDeCompra);
+            setPreuDeVenta(preuDeVenta);
             setStock(stock);
         } catch (Exception e){
             throw new Exception("Intentaste poner un valor no válido");
         }
     }
 
-    public int getId() {
-        return id;
+    public String getCodi() {
+        return codi;
     }
 
-    public void setId(int id) throws Exception {
-        if (id > 0){
-            this.id = id;
-        } else throw new Exception("The id must be a positive number");
+    public void setCodi(String codi) throws Exception {
+        if (Integer.parseInt(codi) > 0){
+            this.codi = codi;
+        } else throw new Exception("The codi must be a positive number");
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescripcio() {
+        return descripcio;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescripcio(String descripcio) {
+        this.descripcio = descripcio;
     }
 
-    public double getArticlePrice() {
-        return articlePrice;
+    public double getPreuDeCompra() {
+        return preuDeCompra;
     }
 
-    public void setArticlePrice(double articlePrice) throws Exception {
+    public void setPreuDeCompra(double preuDeCompra) throws Exception {
 
-        if (articlePrice > 0){
-            this.articlePrice = articlePrice;
+        if (preuDeCompra > 0){
+            this.preuDeCompra = preuDeCompra;
         } else throw new Exception("The price must be positive");
     }
 
-    public double getSalePrice() {
-        return salePrice;
+    public double getPreuDeVenta() {
+        return preuDeVenta;
     }
 
-    public void setSalePrice(double salePrice) throws Exception {
-        if (salePrice > 0){
-            this.salePrice = salePrice;
+    public void setPreuDeVenta(double preuDeVenta) throws Exception {
+        if (preuDeVenta > 0){
+            this.preuDeVenta = preuDeVenta;
         } else throw new Exception("The sale price must be positive");
     }
 
@@ -74,10 +74,13 @@ public class PRU03E07_Ivan_Cabellos {
 
     @Override
     public String toString() {
-        return  "\nID = " + id +
-                "\nDESCRIPTION = '" + desc + '\'' +
-                "\nWHOLESALE PRICE = " + articlePrice +
-                "\nRETAIL PRICE = " + salePrice +
-                "\nSTOCK = " + stock + "\n";
+        String cadena = "--------------------------------------";
+        cadena += "\nCodi = " + this.codi;
+        cadena += "\nDescripcio = " + this.descripcio;
+        cadena += "\nPreu de compra = " + this.preuDeCompra;
+        cadena += "\nPreu de venta = " + this.preuDeVenta;
+        cadena += "\nStock = " + this.stock;
+
+        return cadena;
     }
 }

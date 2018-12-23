@@ -8,9 +8,9 @@ public class PRU03E07Test_Ivan_Cabellos {
         ArrayList<PRU03E07_Ivan_Cabellos> products = new ArrayList<>();
 
         //Instanciamos tres productos
-        PRU03E07_Ivan_Cabellos keyborad = new PRU03E07_Ivan_Cabellos(1, "A gaming keyboard", 39.99, 69.99, 100);
-        PRU03E07_Ivan_Cabellos mouse = new PRU03E07_Ivan_Cabellos(2, "Gaming mouse for pro players", 29.99, 59.99, 60);
-        PRU03E07_Ivan_Cabellos gamingDisplay = new PRU03E07_Ivan_Cabellos(3, "A gaming display for playing", 149.99, 229.99, 45);
+        PRU03E07_Ivan_Cabellos keyborad = new PRU03E07_Ivan_Cabellos("1001", "A gaming keyboard", 39.99, 69.99, 100);
+        PRU03E07_Ivan_Cabellos mouse = new PRU03E07_Ivan_Cabellos("1002", "Gaming mouse for pro players", 29.99, 59.99, 60);
+        PRU03E07_Ivan_Cabellos gamingDisplay = new PRU03E07_Ivan_Cabellos("1003", "A gaming display for playing", 149.99, 229.99, 45);
 
         //Añadimos las instancias a la lista
         products.add(keyborad);
@@ -47,22 +47,22 @@ public class PRU03E07Test_Ivan_Cabellos {
                 case 2:
                     //Instanciamos el producto
                     PRU03E07_Ivan_Cabellos newProduct = new PRU03E07_Ivan_Cabellos();
-                    newProduct.setId(products.size() + 1);
+                    newProduct.setCodi("100" + Integer.toString(products.size() + 1));
 
                     //Añadimos la descripcion
                     System.out.println("What do you want to add? Enter a description");
                     String description = sc.next();
-                    newProduct.setDesc(description);
+                    newProduct.setDescripcio(description);
 
                     //Entramos el precio al por mayor
                     System.out.println("Enter the wholesale price");
                     double wholesalePrice = sc.nextDouble();
-                    newProduct.setArticlePrice(wholesalePrice);
+                    newProduct.setPreuDeCompra(wholesalePrice);
 
                     //Ponemos el precio al por menor
                     System.out.println("Set the price to retail");
                     double retailPrice = sc.nextDouble();
-                    newProduct.setSalePrice(retailPrice);
+                    newProduct.setPreuDeVenta(retailPrice);
 
                     //Ponemos el stock del producto
                     System.out.println("Set the stock of the product");
@@ -111,15 +111,15 @@ public class PRU03E07Test_Ivan_Cabellos {
                     switch (modifyControler){
                         case 1:
                             System.out.print("Enter the new description: ");
-                            String newDescription = sc.next(); modifyProduct.setDesc(newDescription);
+                            String newDescription = sc.next(); modifyProduct.setDescripcio(newDescription);
                             break;
                         case 2:
                             System.out.print("Enter the new wholesale price: ");
-                            double newWholesalePrice = sc.nextDouble(); modifyProduct.setArticlePrice(newWholesalePrice);
+                            double newWholesalePrice = sc.nextDouble(); modifyProduct.setPreuDeCompra(newWholesalePrice);
                             break;
                         case 3:
                             System.out.print("Enter the new retail price: ");
-                            double newRetailPrice = sc.nextDouble(); modifyProduct.setArticlePrice(newRetailPrice);
+                            double newRetailPrice = sc.nextDouble(); modifyProduct.setPreuDeCompra(newRetailPrice);
                             break;
                         case 4:
                             System.out.print("Enter the new stock number: ");
