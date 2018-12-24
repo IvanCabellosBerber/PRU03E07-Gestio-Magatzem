@@ -8,9 +8,9 @@ public class PRU03E07Test_Ivan_Cabellos {
         ArrayList<PRU03E07_Ivan_Cabellos> products = new ArrayList<>();
 
         //Instanciamos tres productos
-        PRU03E07_Ivan_Cabellos keyborad = new PRU03E07_Ivan_Cabellos("1001", "A gaming keyboard", 39.99, 69.99, 100);
-        PRU03E07_Ivan_Cabellos mouse = new PRU03E07_Ivan_Cabellos("1002", "Gaming mouse for pro players", 29.99, 59.99, 60);
-        PRU03E07_Ivan_Cabellos gamingDisplay = new PRU03E07_Ivan_Cabellos("1003", "A gaming display for playing", 149.99, 229.99, 45);
+        PRU03E07_Ivan_Cabellos keyborad = new PRU03E07_Ivan_Cabellos("K1001", "A gaming keyboard", 39.99, 69.99, 100);
+        PRU03E07_Ivan_Cabellos mouse = new PRU03E07_Ivan_Cabellos("M1002", "Gaming mouse for pro players", 29.99, 59.99, 60);
+        PRU03E07_Ivan_Cabellos gamingDisplay = new PRU03E07_Ivan_Cabellos("D1003", "A gaming display for playing", 149.99, 229.99, 45);
 
         //Añadimos las instancias a la lista
         products.add(keyborad);
@@ -40,14 +40,22 @@ public class PRU03E07Test_Ivan_Cabellos {
 
                     System.out.println("Press 7 to exit to menu");
                     int exitFromList = sc.nextInt();
-                    if (exitFromList == 7) continue;
+                    while (exitFromList != 7){
+                        System.out.println("List: ");
+                        System.out.println(products.toString() + "\n");
+
+                        System.out.println("Press 7 to exit to menu");
+                        exitFromList = sc.nextInt();
+                    }
 
                     break;
 
                 case 2:
                     //Instanciamos el producto
                     PRU03E07_Ivan_Cabellos newProduct = new PRU03E07_Ivan_Cabellos();
-                    newProduct.setCodi("100" + Integer.toString(products.size() + 1));
+                    System.out.print("Enter the correct code for the product: ");
+                    String codiProduct = sc.next();
+                    newProduct.setCodi(codiProduct);
 
                     //Añadimos la descripcion
                     System.out.println("What do you want to add? Enter a description");

@@ -1,7 +1,7 @@
 
 public class PRU03E07_Ivan_Cabellos {
 
-    private String codi = "LLIURE";
+    private String codi = "X0000";
     private String descripcio;
     private double preuDeCompra;
     private double preuDeVenta;
@@ -28,7 +28,7 @@ public class PRU03E07_Ivan_Cabellos {
     }
 
     public void setCodi(String codi) throws Exception {
-        if (Integer.parseInt(codi) > 0){
+        if (codi.length() == 5){
             this.codi = codi;
         } else throw new Exception("The codi must be a positive number");
     }
@@ -74,12 +74,13 @@ public class PRU03E07_Ivan_Cabellos {
 
     @Override
     public String toString() {
-        String cadena = "--------------------------------------";
-        cadena += "\nCodi = " + this.codi;
+
+        String cadena = "\nCodi = " + this.codi;
         cadena += "\nDescripcio = " + this.descripcio;
         cadena += "\nPreu de compra = " + this.preuDeCompra;
         cadena += "\nPreu de venta = " + this.preuDeVenta;
         cadena += "\nStock = " + this.stock;
+        cadena += "\n--------------------------------------";
 
         return cadena;
     }
